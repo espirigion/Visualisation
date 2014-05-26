@@ -1,0 +1,53 @@
+<%= form_for(@stat) do |f| %>
+  <% if @stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stat.errors.count, "error") %> prohibited this stat from being saved:</h2>
+
+      <ul>
+      <% @stat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :round %><br>
+    <%= f.number_field :round %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :home %><br>
+    <%= f.text_field :home %>
+  </div>
+  <div class="field">
+    <%= f.label :away %><br>
+    <%= f.text_field :away %>
+  </div>
+  <div class="field">
+    <%= f.label :homescore %><br>
+    <%= f.number_field :homescore %>
+  </div>
+  <div class="field">
+    <%= f.label :awayscore %><br>
+    <%= f.number_field :awayscore %>
+  </div>
+  <div class="field">
+    <%= f.label :homegamepoints %><br>
+    <%= f.number_field :homegamepoints %>
+  </div>
+  <div class="field">
+    <%= f.label :awaygamepoints %><br>
+    <%= f.number_field :awaygamepoints %>
+  </div>
+  <div class="field">
+    <%= f.label :venue %><br>
+    <%= f.text_field :venue %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

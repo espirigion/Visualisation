@@ -1,0 +1,43 @@
+<h1>Listing stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Round</th>
+      <th>Date</th>
+      <th>Home</th>
+      <th>Away</th>
+      <th>Homescore</th>
+      <th>Awayscore</th>
+      <th>Homegamepoints</th>
+      <th>Awaygamepoints</th>
+      <th>Venue</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stats.each do |stat| %>
+      <tr>
+        <td><%= stat.round %></td>
+        <td><%= stat.date %></td>
+        <td><%= stat.home %></td>
+        <td><%= stat.away %></td>
+        <td><%= stat.homescore %></td>
+        <td><%= stat.awayscore %></td>
+        <td><%= stat.homegamepoints %></td>
+        <td><%= stat.awaygamepoints %></td>
+        <td><%= stat.venue %></td>
+        <td><%= link_to 'Show', stat %></td>
+        <td><%= link_to 'Edit', edit_stat_path(stat) %></td>
+        <td><%= link_to 'Destroy', stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stat', new_stat_path %>

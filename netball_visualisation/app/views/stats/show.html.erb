@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Round:</strong>
+  <%= @stat.round %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @stat.date %>
+</p>
+
+<p>
+  <strong>Home:</strong>
+  <%= @stat.home %>
+</p>
+
+<p>
+  <strong>Away:</strong>
+  <%= @stat.away %>
+</p>
+
+<p>
+  <strong>Homescore:</strong>
+  <%= @stat.homescore %>
+</p>
+
+<p>
+  <strong>Awayscore:</strong>
+  <%= @stat.awayscore %>
+</p>
+
+<p>
+  <strong>Homegamepoints:</strong>
+  <%= @stat.homegamepoints %>
+</p>
+
+<p>
+  <strong>Awaygamepoints:</strong>
+  <%= @stat.awaygamepoints %>
+</p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @stat.venue %>
+</p>
+
+<%= link_to 'Edit', edit_stat_path(@stat) %> |
+<%= link_to 'Back', stats_path %>
